@@ -1,17 +1,33 @@
 {
-  "name": "chat",
+  "name": "chatzbox",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "babel-plugin-macros": "^2.5.0",
+    "dotenv": "^7.0.0",
+    "express": "^4.16.4",
+    "firebase": "^5.8.6",
+    "firebaseui": "^3.5.2",
+    "normalize.css": "^8.0.1",
+    "polished": "^3.0.0",
     "react": "^16.8.3",
     "react-dom": "^16.8.3",
-    "react-scripts": "2.1.5"
+    "react-icons": "^3.4.0",
+    "react-router-dom": "^4.3.1",
+    "react-scripts": "^2.1.8",
+    "semantic-ui-css": "^2.4.1",
+    "semantic-ui-react": "^0.85.0",
+    "socket.io": "^2.2.0",
+    "styled-components": "^4.1.3",
+    "uuid": "^3.3.2"
   },
   "scripts": {
     "start": "react-scripts start",
+    "server": "cd server && nodemon server.js",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "dev": "concurrently --kill-others-on-fail \"npm run server\" \"npm start\" "
   },
   "eslintConfig": {
     "extends": "react-app"
@@ -21,5 +37,9 @@
     "not dead",
     "not ie <= 11",
     "not op_mini all"
-  ]
+  ],
+  "devDependencies": {
+    "concurrently": "^4.1.0",
+    "nodemon": "^1.18.10"
+  }
 }
