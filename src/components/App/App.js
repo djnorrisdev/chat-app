@@ -19,6 +19,10 @@ const provider = new firebase.auth.GoogleAuthProvider();
 const socketURL = 'http://localhost:7000';
 const socket = io(socketURL);
 
+//
+// TODO: add Context API
+//
+
 class App extends Component {
   state = {
     loggedIn: false,
@@ -57,9 +61,7 @@ class App extends Component {
       console.log(error)
       var errorCode = error.code;
       var errorMessage = error.message;
-      // The email of the user's account used.
       var email = error.email;
-      // The firebase.auth.AuthCredential type that was used.
       var credential = error.credential;
       console.log(errorCode, errorMessage, email, credential);
       // localStorage.removeItem(token);

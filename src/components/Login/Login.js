@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import firebase from 'firebase';
 import { GoogleBtn, Wrapper, Title, Register, StyledForm } from './loginStyles';
 import { Form } from 'semantic-ui-react';
 import { Link } from 'react-router-dom';
@@ -8,7 +7,6 @@ import { FaGoogle } from 'react-icons/fa';
 
 
 
-// const provider = new firebase.auth.GoogleAuthProvider();
 
 export default class Login extends Component {
   componentDidUpdate(prevProps) {
